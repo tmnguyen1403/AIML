@@ -1,0 +1,51 @@
+% !TEX root = //Users/amynguyen/Projects/MathAIML/latex_files/gradients.tex
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+The gradient
+The gradient for f(x,y)
+
+Understanding the gradient conceptutally  \\
+\begin{itemize}
+    \item The gradient represents the slope of a function.
+    \item  The gradient points in the direction of the greatest rate of increase of the function,
+    and its' magnitude is the slope in that direction.
+\end{itemize}
+\textbf{Gradient Vectors}\\
+\begin{math}
+    \nabla f(x,y,z) = [\frac{df(x,y,z)}{dx},\frac{df(x,y,z)}{dy},\frac{df(x,y,z)}{dz}]
+\end{math} \\
+\textbf{The Jacobian Matrix}\\
+Gradient vectors organize the partial derivatives for a scalar function. If we have multiple functions, we use the Jacobian\\
+\begin{math}
+    \textbf{J}= 
+    \begin{bmatrix}
+        \nabla f(x,y)\\
+        \nabla g(x,y)\\
+    \end{bmatrix}
+    = \begin{bmatrix}
+        \frac{df(x,y)}{dx} & \frac{df(x,y)}{dy} \\
+        \frac{dg(x,y)}{dx} & \frac{dg(x,y)}{dy} \\
+    \end{bmatrix}
+\end{math}\newline
+\textbf{The general case}\\
+\begin{math}
+    f(x,y,z) \rightarrow f(x) where\  x = 
+    \begin{bmatrix}
+        x1\\x2\\.\\.\\.\\x_n
+    \end{bmatrix}\\
+    \textbf{J}= 
+    \begin{bmatrix}
+        \nabla f_1(x,y)\\
+        \nabla f_2(x,y)\\
+        ...\\
+        \nabla f_n(x,y)\\
+    \end{bmatrix}
+    = \begin{bmatrix}
+        \frac{df_1(\textbf{x})}{dx_1} & \frac{df_1(\textbf{x})}{dx_2} & ... & \frac{df_1(\textbf{x})}{dx_n} \\
+        \frac{df_2(\textbf{x})}{dx_1} & \frac{df_2(\textbf{x})}{dx_2} & ... & \frac{df_2(\textbf{x})}{dx_n} \\
+        ...\\
+        \frac{df_m(\textbf{x})}{dx_1} & \frac{df_m(\textbf{x})}{dx_2} & ... & \frac{df_m(\textbf{x})}{dx_n} \\
+    \end{bmatrix}
+\end{math}
+\end{document}
